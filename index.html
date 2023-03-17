@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Supply Chain</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script
+      charset="utf-8"
+      src="https://cdn.ethers.io/scripts/ethers-v4.min.js"
+      type="text/javascript"
+    ></script>
+    <style>
+      /* Center the card horizontally and vertically */
+      body {
+        background-size: cover;
+        background-position: center;
+        background-image: url(https://images.unsplash.com/photo-1518843875459-f738682238a6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1142&q=80);
+      }
+      .card-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      /* Add a box shadow to the card */
+      .card {
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        min-width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="container d-flex justify-content-center align-items-center min-vh-100"
+    >
+      <div class="card">
+        <h3 class="text-center">Inventory Management</h3>
+        <form>
+          <div class="form-group">
+            <label for="vegetable">Choose vegetable</label>
+            <select class="form-control" id="vegetable">
+              <option value="Tomato">Tomato</option>
+              <option value="Potato">Potato</option>
+              <option value="Carrot">Carrot</option>
+              <option value="Brinjal">Brinjal</option>
+              <option value="Cucumber">Cucumber</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="goodQty">Good vegetable Qty.</label>
+            <input type="number" class="form-control" id="goodQty" />
+          </div>
+          <div class="form-group">
+            <label for="badQty">Bad vegetable Qty.</label>
+            <input type="number" class="form-control" id="badQty" />
+          </div>
+          <div class="form-group">
+            <label for="pricePerUnit">Price per unit</label>
+            <input type="number" class="form-control" id="pricePerUnit" />
+          </div>
+        </form>
+        <button type="submit" class="btn btn-success" onClick="onSubmit()">
+          Submit
+        </button>
+        <button
+          type="submit"
+          class="btn btn-warning mt-3"
+          onClick="onViewResult()"
+          type="button"
+          data-toggle="modal"
+          data-target="#exampleModal"
+        >
+          View Result
+        </button>
+      </div>
+      <!-- Hello  -->
+      <!-- Button trigger modal -->
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Result</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" id="modalbody">loding...</div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
