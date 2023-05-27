@@ -62,12 +62,12 @@
             <input type="number" class="form-control" id="pricePerUnit" />
           </div>
         </form>
-        <button type="submit" class="btn btn-success" onClick="onSubmit()">
+        <button type="submit" class="btn btn-warning bg-success" onClick="onSubmit()">
           Submit
         </button>
         <button
           type="submit"
-          class="btn btn-warning mt-3"
+          class="btn btn-warning bg-warning mt-3"
           onClick="onViewResult()"
           type="button"
           data-toggle="modal"
@@ -76,10 +76,7 @@
           View Result
         </button>
       </div>
-      <!-- Hello  -->
-      <!-- Button trigger modal -->
 
-      <!-- Modal -->
       <div
         class="modal fade"
         id="exampleModal"
@@ -115,6 +112,16 @@
         </div>
       </div>
     </div>
+
+    <!-- Start of Your Widget Script -->
+
+    <div id="pansophy-chatbot"></div>
+    <script>
+      window.chatbotID = "2";
+    </script>
+    <script defer="defer" src="bundle.js" data-text-color="green"></script>
+
+    <!-- End of Widget Script -->
 
     <!-- jQuery and Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
